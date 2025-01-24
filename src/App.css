@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+  font-family: 'Cursive', sans-serif;
+  background-color: #fff0f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.name-form, .agreement-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffebcd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name-form label, .agreement-form label {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #ff69b4;
+}
+
+.name-form input, .agreement-form input {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+}
+
+.name-form button, .agreement-form button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.name-form button:hover, .agreement-form button:hover {
+  background-color: #ff1493;
+}
+
+.question-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffebcd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-container p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #ff69b4;
+}
+
+.question-container button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  margin: 0.5em;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question-container button:hover {
+  background-color: #ff1493;
+}
+
+.final-message {
+  font-size: 1.5em;
+  color: #ff69b4;
+  background-color: #ffebcd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.photo {
+  width: 200px;
+  height: auto;
+  margin-top: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
