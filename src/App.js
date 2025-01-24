@@ -53,15 +53,15 @@ function App() {
     doc.text(`Marriage Agreement`, 10, 10);
     doc.text(`This is to certify that ${name} and ${partnerName} have agreed to marry on ${marriageDate}.`, 10, 20);
     doc.text(`Lovely words: "Together forever, never apart. Maybe in distance, \n but never in heart."`, 10, 30);
-    doc.text(`\n Signed,`, 10, 40);
-    doc.text(`\n ${name} & ${partnerName}`, 10, 50);
+    doc.text(`\nSigned,`, 10, 40);
+    doc.text(`${name} & ${partnerName}`, 10, 50);
     doc.save('marriage_agreement.pdf');
   };
 
   return (
     <div className="App">
-      <audio ref={noAudioRef} src="/cbbcry.mp3" />
-      <audio ref={yesAudioRef} src="/perfect.mp3" />
+      <audio ref={noAudioRef} src="/propose-your-love/public/cbbcry.mp3" />
+      <audio ref={yesAudioRef} src="/propose-your-love/public/perfect.mp3" />
 
       {!showQuestion && (
         <form onSubmit={handleNameSubmit} className="name-form">
@@ -81,7 +81,7 @@ function App() {
       {showQuestion && !showSecondQuestion && !showFinalMessage && (
         <div className="question-container">
           <p>Do you love me?</p>
-          <img src="/qstn.png" alt="photo" className="photo" />
+          <img src="/propose-your-love/public/qstn.png" alt="" className="photo" />
           <button onClick={handleYesClick}>Yes</button>
           <button
             onClick={handleNoClick}
@@ -95,7 +95,7 @@ function App() {
       {showSecondQuestion && !showFinalMessage && (
         <div className="question-container">
           <p>Are you sure you don't love me, {name}? 😢</p>
-          <img src="/crying.png" alt="photo" className="photo" />
+          <img src="propose-your-love/public/crying.png" alt="" className="photo" />
           <button onClick={handleYesClick}>Yes</button>
           <button
             onClick={handleNoClick}
@@ -109,7 +109,7 @@ function App() {
       {showFinalMessage && (
         <div className="final-message">
           <p>I know you love me and I love you too, Golu Molu!!! {name}</p>
-          <img src="/tooo.png" alt="photo" className="photo" />
+          <img src="/propose-your-love/public/tooo.png" alt="photo" className="photo" />
         </div>
       )}
 
