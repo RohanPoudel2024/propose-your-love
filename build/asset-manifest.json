@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/propose-your-love/static/css/main.3c4235ac.css",
-    "main.js": "/propose-your-love/static/js/main.8224b553.js",
+    "main.js": "/propose-your-love/static/js/main.5806dd0f.js",
     "static/js/743.87a99fda.chunk.js": "/propose-your-love/static/js/743.87a99fda.chunk.js",
     "static/js/621.14e3ec0b.chunk.js": "/propose-your-love/static/js/621.14e3ec0b.chunk.js",
     "static/js/734.ad1bbfc0.chunk.js": "/propose-your-love/static/js/734.ad1bbfc0.chunk.js",
     "static/js/714.c14294ef.chunk.js": "/propose-your-love/static/js/714.c14294ef.chunk.js",
     "index.html": "/propose-your-love/index.html",
     "main.3c4235ac.css.map": "/propose-your-love/static/css/main.3c4235ac.css.map",
-    "main.8224b553.js.map": "/propose-your-love/static/js/main.8224b553.js.map",
+    "main.5806dd0f.js.map": "/propose-your-love/static/js/main.5806dd0f.js.map",
     "743.87a99fda.chunk.js.map": "/propose-your-love/static/js/743.87a99fda.chunk.js.map",
     "621.14e3ec0b.chunk.js.map": "/propose-your-love/static/js/621.14e3ec0b.chunk.js.map",
     "734.ad1bbfc0.chunk.js.map": "/propose-your-love/static/js/734.ad1bbfc0.chunk.js.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.3c4235ac.css",
-    "static/js/main.8224b553.js"
+    "static/js/main.5806dd0f.js"
   ]
 }
