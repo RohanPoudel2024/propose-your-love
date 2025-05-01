@@ -11,6 +11,8 @@ function App() {
   const [showFinalMessage, setShowFinalMessage] = useState(false);
   const [showAgreement, setShowAgreement] = useState(false);
   const [noButtonPosition, setNoButtonPosition] = useState({ top: '50%', left: '50%' });
+  const [firstQuestionImage, setFirstQuestionImage] = useState('qstn.png');
+  const [secondQuestionImage, setSecondQuestionImage] = useState('crying.png');
   const noAudioRef = useRef(null);
   const yesAudioRef = useRef(null);
 
@@ -20,17 +22,27 @@ function App() {
   };
 
   const handleNoClick = () => {
+    if (!showSecondQuestion) {
+      setShowSecondQuestion(true);
+    }
+  };
+
+  const handleNoButtonHover = () => {
+    console.log('Hover detected! Changing to crying image');
+    
     if (noAudioRef.current) {
       noAudioRef.current.play();
     }
-    if (!showSecondQuestion) {
-      setShowSecondQuestion(true);
-    } else {
-      setNoButtonPosition({
-        top: `${Math.random() * 80 + 10}%`,
-        left: `${Math.random() * 80 + 10}%`,
-      });
-    }
+
+    
+    setFirstQuestionImage('crying.png');
+    setSecondQuestionImage('crying.png'); 
+    
+    
+    setNoButtonPosition({
+      top: `${Math.random() * 80 + 10}%`,
+      left: `${Math.random() * 80 + 10}%`,
+    });
   };
 
   const handleYesClick = () => {
@@ -44,15 +56,15 @@ function App() {
     setShowFinalMessage(true);
     setTimeout(() => {
       setShowAgreement(true);
-    }, 5000); // Show agreement after 5 seconds
+    }, 5000); 
   };
 
   const handleAgreementSubmit = (e) => {
     e.preventDefault();
     const doc = new jsPDF();
     doc.text(`Marriage Agreement`, 10, 10);
-    doc.text(`This is to certify that ${name} and ${partnerName} have agreed to marry on ${marriageDate}.`, 10, 20);
-    doc.text(`Lovely words: "Together forever, never apart. Maybe in distance, but never in heart."`, 10, 30);
+    doc.text(`This is to certify that ${name} and ${partnerName} \nhave agreed to marry on ${marriageDate}.`, 10, 20);
+    doc.text(`Lovely words: "Together forever, never apart. \nMaybe in distance, but never in heart."`, 10, 30);
     doc.text(`Signed,`, 10, 40);
     doc.text(`${name} & ${partnerName}`, 10, 50);
     doc.save('marriage_agreement.pdf');
@@ -81,10 +93,11 @@ function App() {
       {showQuestion && !showSecondQuestion && !showFinalMessage && (
         <div className="question-container">
           <p>Do you love me?</p>
-          <img src={`${process.env.PUBLIC_URL}/qstn.png`} alt="" className="photo" />
+          <img src={`${process.env.PUBLIC_URL}/${firstQuestionImage}`} alt="" className="photo" />
           <button onClick={handleYesClick}>Yes</button>
           <button
             onClick={handleNoClick}
+            onMouseEnter={handleNoButtonHover}
             style={{ position: 'absolute', top: noButtonPosition.top, left: noButtonPosition.left }}
           >
             No
@@ -95,10 +108,11 @@ function App() {
       {showSecondQuestion && !showFinalMessage && (
         <div className="question-container">
           <p>Are you sure you don't love me, {name}? 😢</p>
-          <img src={`${process.env.PUBLIC_URL}/crying.png`} alt="" className="photo" />
+          <img src={`${process.env.PUBLIC_URL}/${secondQuestionImage}`} alt="" className="photo" />
           <button onClick={handleYesClick}>Yes</button>
           <button
             onClick={handleNoClick}
+            onMouseEnter={handleNoButtonHover}
             style={{ position: 'absolute', top: noButtonPosition.top, left: noButtonPosition.left }}
           >
             No

@@ -1,21 +1,29 @@
 {
   "files": {
-    "main.css": "/propose-your-love/static/css/main.3c4235ac.css",
-    "main.js": "/propose-your-love/static/js/main.f8480b77.js",
-    "static/js/743.87a99fda.chunk.js": "/propose-your-love/static/js/743.87a99fda.chunk.js",
-    "static/js/621.14e3ec0b.chunk.js": "/propose-your-love/static/js/621.14e3ec0b.chunk.js",
-    "static/js/734.ad1bbfc0.chunk.js": "/propose-your-love/static/js/734.ad1bbfc0.chunk.js",
-    "static/js/714.c14294ef.chunk.js": "/propose-your-love/static/js/714.c14294ef.chunk.js",
+    "main.css": "/propose-your-love/static/css/main.55276f8b.chunk.css",
+    "main.js": "/propose-your-love/static/js/main.d60a93c8.chunk.js",
+    "main.js.map": "/propose-your-love/static/js/main.d60a93c8.chunk.js.map",
+    "runtime-main.js": "/propose-your-love/static/js/runtime-main.e0ee1117.js",
+    "runtime-main.js.map": "/propose-your-love/static/js/runtime-main.e0ee1117.js.map",
+    "static/js/2.504ee9f9.chunk.js": "/propose-your-love/static/js/2.504ee9f9.chunk.js",
+    "static/js/2.504ee9f9.chunk.js.map": "/propose-your-love/static/js/2.504ee9f9.chunk.js.map",
+    "static/js/3.1560c08a.chunk.js": "/propose-your-love/static/js/3.1560c08a.chunk.js",
+    "static/js/3.1560c08a.chunk.js.map": "/propose-your-love/static/js/3.1560c08a.chunk.js.map",
+    "static/js/4.87385458.chunk.js": "/propose-your-love/static/js/4.87385458.chunk.js",
+    "static/js/4.87385458.chunk.js.map": "/propose-your-love/static/js/4.87385458.chunk.js.map",
+    "static/js/5.3be0e75b.chunk.js": "/propose-your-love/static/js/5.3be0e75b.chunk.js",
+    "static/js/5.3be0e75b.chunk.js.map": "/propose-your-love/static/js/5.3be0e75b.chunk.js.map",
     "index.html": "/propose-your-love/index.html",
-    "main.3c4235ac.css.map": "/propose-your-love/static/css/main.3c4235ac.css.map",
-    "main.f8480b77.js.map": "/propose-your-love/static/js/main.f8480b77.js.map",
-    "743.87a99fda.chunk.js.map": "/propose-your-love/static/js/743.87a99fda.chunk.js.map",
-    "621.14e3ec0b.chunk.js.map": "/propose-your-love/static/js/621.14e3ec0b.chunk.js.map",
-    "734.ad1bbfc0.chunk.js.map": "/propose-your-love/static/js/734.ad1bbfc0.chunk.js.map",
-    "714.c14294ef.chunk.js.map": "/propose-your-love/static/js/714.c14294ef.chunk.js.map"
+    "static/css/main.55276f8b.chunk.css.map": "/propose-your-love/static/css/main.55276f8b.chunk.css.map",
+    "static/js/2.504ee9f9.chunk.js.LICENSE.txt": "/propose-your-love/static/js/2.504ee9f9.chunk.js.LICENSE.txt",
+    "static/js/3.1560c08a.chunk.js.LICENSE.txt": "/propose-your-love/static/js/3.1560c08a.chunk.js.LICENSE.txt",
+    "static/js/4.87385458.chunk.js.LICENSE.txt": "/propose-your-love/static/js/4.87385458.chunk.js.LICENSE.txt",
+    "static/js/5.3be0e75b.chunk.js.LICENSE.txt": "/propose-your-love/static/js/5.3be0e75b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.3c4235ac.css",
-    "static/js/main.f8480b77.js"
+    "static/js/runtime-main.e0ee1117.js",
+    "static/js/2.504ee9f9.chunk.js",
+    "static/css/main.55276f8b.chunk.css",
+    "static/js/main.d60a93c8.chunk.js"
   ]
 }
