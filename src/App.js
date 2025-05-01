@@ -16,12 +16,34 @@ function App() {
   const noAudioRef = useRef(null);
   const yesAudioRef = useRef(null);
 
+  
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") 
+      || (navigator.userAgent.indexOf('IEMobile') !== -1)
+      || (window.innerWidth <= 768);
+  }
+
   const handleNameSubmit = (e) => {
     e.preventDefault();
     setShowQuestion(true);
   };
 
   const handleNoClick = () => {
+    
+    if (isMobileDevice()) {
+      if (noAudioRef.current) {
+        noAudioRef.current.play();
+      }
+      setFirstQuestionImage('crying.png');
+      setSecondQuestionImage('crying.png');
+      
+      
+      setNoButtonPosition({
+        top: `${Math.random() * 80 + 10}%`,
+        left: `${Math.random() * 80 + 10}%`,
+      });
+    }
+    
     if (!showSecondQuestion) {
       setShowSecondQuestion(true);
     }
@@ -64,25 +86,25 @@ const handleAgreementSubmit = (e) => {
 
   const doc = new jsPDF();
 
-  // Title
+  
   doc.setFontSize(16);
   doc.text("Marriage Agreement", 10, 10);
 
-  // Agreement content
+  
   doc.setFontSize(12);
   doc.text(`This is to certify that ${name} and ${partnerName}`, 10, 20);
   doc.text(`have agreed to marry on ${marriageDate}.`, 10, 28);
 
-  // Quote
+  
   doc.text(`Lovely words:`, 10, 40);
   doc.text(`"Together forever, never apart.`, 10, 48);
   doc.text(`Maybe in distance, but never in heart."`, 10, 56);
 
-  // Signatures
+  
   doc.text("Signed,", 10, 70);
   doc.text(`${name} & ${partnerName}`, 10, 78);
 
-  // Save the document
+  
   doc.save("marriage_agreement.pdf");
 };
 
@@ -114,7 +136,8 @@ const handleAgreementSubmit = (e) => {
           <button onClick={handleYesClick}>Yes</button>
           <button
             onClick={handleNoClick}
-            onMouseEnter={handleNoButtonHover}
+            onMouseEnter={isMobileDevice() ? null : handleNoButtonHover}
+            onTouchStart={isMobileDevice() ? handleNoButtonHover : null}
             style={{ position: 'absolute', top: noButtonPosition.top, left: noButtonPosition.left }}
           >
             No

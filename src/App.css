@@ -104,3 +104,28 @@
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+/* Add these responsive styles to your existing CSS */
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .name-form label, .agreement-form label {
+    font-size: 1.2em;
+  }
+
+  .question-container p {
+    font-size: 1.5em;
+  }
+
+  .photo {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .final-message p {
+    font-size: 1.2em;
+  }
+}
