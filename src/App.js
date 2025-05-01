@@ -59,16 +59,33 @@ function App() {
     }, 5000); 
   };
 
-  const handleAgreementSubmit = (e) => {
-    e.preventDefault();
-    const doc = new jsPDF();
-    doc.text(`Marriage Agreement`, 10, 10);
-    doc.text(`This is to certify that ${name} and ${partnerName} \nhave agreed to marry on ${marriageDate}.`, 10, 20);
-    doc.text(`Lovely words: "Together forever, never apart. \nMaybe in distance, but never in heart."`, 10, 30);
-    doc.text(`Signed,`, 10, 40);
-    doc.text(`${name} & ${partnerName}`, 10, 50);
-    doc.save('marriage_agreement.pdf');
-  };
+const handleAgreementSubmit = (e) => {
+  e.preventDefault();
+
+  const doc = new jsPDF();
+
+  // Title
+  doc.setFontSize(16);
+  doc.text("Marriage Agreement", 10, 10);
+
+  // Agreement content
+  doc.setFontSize(12);
+  doc.text(`This is to certify that ${name} and ${partnerName}`, 10, 20);
+  doc.text(`have agreed to marry on ${marriageDate}.`, 10, 28);
+
+  // Quote
+  doc.text(`Lovely words:`, 10, 40);
+  doc.text(`"Together forever, never apart.`, 10, 48);
+  doc.text(`Maybe in distance, but never in heart."`, 10, 56);
+
+  // Signatures
+  doc.text("Signed,", 10, 70);
+  doc.text(`${name} & ${partnerName}`, 10, 78);
+
+  // Save the document
+  doc.save("marriage_agreement.pdf");
+};
+
 
   return (
     <div className="App">
